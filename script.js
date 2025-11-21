@@ -1,20 +1,28 @@
-let menu = document.getElementById("menu");
-let hotspot = document.getElementById("hotspot");
-let menuOpen = false;
+// Elements
+const settingsBtn = document.getElementById("settingsBtn");
+const settingsPanel = document.getElementById("settingsPanel");
+const closeSettings = document.getElementById("closeSettings");
+const themeSelect = document.getElementById("themeSelect");
 
-hotspot.addEventListener("click", toggleMenu);
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+    document.body.classList.add(savedTheme);
+    themeSelect.value = savedTheme;
+}
 
-document.addEventListener("keydown", (e) => {
-    if (e.ctrlKey && e.key === "h") {
-        toggleMenu();
-    }
+// Toggle settings panel
+settingsBtn.addEventListener("click", () => {
+    settingsPanel.classList.toggle("open");
 });
 
-function toggleMenu() {
-    menuOpen = !menuOpen;
-    if (menuOpen) {
-        menu.style.left = "0";
-    } else {
-        menu.style.left = "-250px";
-    }
-}
+closeSettings.addEventListener("click", () => {
+    settingsPanel.classList.remove("open");
+});
+
+// Theme switching
+themeSelect.addEventListener("change", () => {
+    document.body.className = "";
+    document.body.classList.add(themeSelect.value);
+    localStorage.setItem("theme", themeSelect.value);
+});

@@ -3,23 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Viewer</title>
+    <title>MxUB.me</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Invisible click zone (top-left corner) -->
-    <div id="hotspot"></div>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">MxUB.me</div>
+        <div class="nav-right">
+            <button id="themeBtn">Theme</button>
+            <button id="settingsBtn">Settings</button>
+        </div>
+    </nav>
 
-    <!-- Hidden slide-out menu -->
-    <div id="menu">
-        <h2>Secret Hub</h2>
-        <a href="#" class="menu-item">Game 1</a>
-        <a href="#" class="menu-item">Game 2</a>
-        <a href="#" class="menu-item">Game 3</a>
-        <a href="#" class="menu-item">Proxy 1</a>
-        <a href="#" class="menu-item">App 1</a>
+    <!-- SETTINGS PANEL -->
+    <div id="settingsPanel">
+        <h2>Settings</h2>
+
+        <label for="themeSelect">Theme:</label>
+        <select id="themeSelect">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="neon">Neon</option>
+        </select>
+
+        <hr>
+
+        <h3>Credits:</h3>
+        <p>Created by:</p>
+        <p><b>yesiamaguy</b> on GitHub</p>
+        <p><b>Da-Monke409</b> on GitHub</p>
+
+        <button id="closeSettings">Close</button>
     </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <h1>Welcome to MxUB.me</h1>
+        <p>Select a theme, explore features, and customize your experience.</p>
+
+        <div class="card-container">
+            <div class="card">Game Section</div>
+            <div class="card">Apps</div>
+            <div class="card">Tools</div>
+            <div class="card">Proxy</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 MxUB.me</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
