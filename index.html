@@ -21,7 +21,7 @@
     <div id="settingsPanel">
         <h2>Settings</h2>
 
-        <label for="themeSelect">Theme:</label>
+        <label>Theme:</label>
         <select id="themeSelect">
             <option value="light">Light</option>
             <option value="dark">Dark</option>
@@ -30,26 +30,100 @@
 
         <hr>
 
-        <h3>Credits:</h3>
-        <p>Created by:</p>
-        <p><b>yesiamaguy</b> on GitHub</p>
-        <p><b>Da-Monke409</b> on GitHub</p>
+        <h3>Credits</h3>
+        <p>Created by <b>yesiamaguy</b> on GitHub</p>
+        <p>Created by <b>Da-Monke409</b> on GitHub</p>
 
         <button id="closeSettings">Close</button>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <main>
+    <!-- MAIN HOME SCREEN -->
+    <main id="homeScreen">
         <h1>Welcome to MxUB.me</h1>
-        <p>Select a theme, explore features, and customize your experience.</p>
+        <p>Select a section.</p>
 
         <div class="card-container">
-            <div class="card">Game Section</div>
-            <div class="card">Apps</div>
-            <div class="card">Tools</div>
-            <div class="card">Proxy</div>
+            <div class="card" onclick="openSection('games')">Game Section</div>
+            <div class="card" onclick="openSection('apps')">Apps</div>
+            <div class="card" onclick="openSection('tools')">Tools</div>
+            <div class="card" onclick="openSection('proxy')">Proxy</div>
         </div>
     </main>
+
+    <!-- CONTENT PANEL (EMBEDDED PAGE) -->
+    <div id="contentPanel">
+        <button id="backBtn">← Back</button>
+        <div id="contentArea">
+            <!-- Loaded dynamically -->
+        </div>
+    </div><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MxUB.me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">MxUB.me</div>
+        <div class="nav-right">
+            <button id="themeBtn">Theme</button>
+            <button id="settingsBtn">Settings</button>
+        </div>
+    </nav>
+
+    <!-- SETTINGS PANEL -->
+    <div id="settingsPanel">
+        <h2>Settings</h2>
+
+        <label>Theme:</label>
+        <select id="themeSelect">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="neon">Neon</option>
+        </select>
+
+        <hr>
+
+        <h3>Credits</h3>
+        <p>Created by <b>yesiamaguy</b> on GitHub</p>
+        <p>Created by <b>Da-Monke409</b> on GitHub</p>
+
+        <button id="closeSettings">Close</button>
+    </div>
+
+    <!-- MAIN HOME SCREEN -->
+    <main id="homeScreen">
+        <h1>Welcome to MxUB.me</h1>
+        <p>Select a section.</p>
+
+        <div class="card-container">
+            <div class="card" onclick="openSection('games')">Game Section</div>
+            <div class="card" onclick="openSection('apps')">Apps</div>
+            <div class="card" onclick="openSection('tools')">Tools</div>
+            <div class="card" onclick="openSection('proxy')">Proxy</div>
+        </div>
+    </main>
+
+    <!-- CONTENT PANEL (EMBEDDED PAGE) -->
+    <div id="contentPanel">
+        <button id="backBtn">← Back</button>
+        <div id="contentArea">
+            <!-- Loaded dynamically -->
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 MxUB.me</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
 
     <footer>
         <p>© 2025 MxUB.me</p>
